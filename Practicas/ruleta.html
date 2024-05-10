@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script type="text/javascript" src="../js/scripts.js"></script>
+	<link rel="icon" type="image/x-icon" href="../assets/logo-2.ico"/>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="assets/material.ico"/>
+	<title>RoboRealm - Ruleta</title>
+</head>
+<style type="text/css">
+	.columna{
+		background-color: #E9E9E9;
+		border-radius: 2vh;
+		margin: 1vh;
+	}
+	    /* Estilos para el contenedor del código */
+		#codigo-container {
+      width: 80%;
+      margin: 50px auto;
+      position: relative;
+    }
+    /* Estilos para el cuadro de texto */
+    #codigo {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+    /* Estilos para las líneas numeradas */
+    .line-numbers {
+      position: absolute;
+      left: -40px;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      padding: 10px 0;
+      background-color: #f8f9fa;
+      border-right: 1px solid #ccc;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Estilos para el botón de copiar */
+    #copiar-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+	.Diagrama-1{
+		width: 100%;
+		height: 400px;
+	}
+
+</style>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="../index.html">RoboRealm</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+	<div class="container" style="margin-top: 2vh;">
+		<H2 class="text-center" style="color: red;">Ruleta numeros aleatorios <img src="../assets/img/ruleta.png" width="48px" height="48px"></H2>
+		<div class="row justify-content-between">
+			
+			<div class="col-12 columna">
+				<h3 class="text-center">Video explicativo</h3>
+				<video src=""></video>
+			</div>
+
+			<div class="col-8 columna">
+				<h2 class="text-center">Paso a paso de la ruleta de números</h2><br><br>
+				<p>Conectar los 4 pines del motor al controlador del motor: Esto implica conectar los cables que salen del motor a las salidas correspondientes en el controlador del motor paso a paso. Es importante asegurarse de seguir el esquema de conexión adecuado para garantizar un funcionamiento correcto.<br><br>
+				Conectar el GND y los 5V del controlador del motor paso a paso a los GND y los 5V del Arduino: Aquí se establece una conexión entre el controlador del motor y la placa Arduino. Los cables que proporcionan tierra (GND) y alimentación (5V) desde el controlador del motor deben conectarse a los pines correspondientes en la placa Arduino.<br><br>	
+				Conectar los 4 pines restantes del controlador al Arduino en el puerto 8, 9, 10, 11: El controlador del motor paso a paso tiene cuatro pines adicionales que se utilizan para enviar señales de control desde la placa Arduino. Estas señales controlan el movimiento del motor. Debes conectar estos pines a los pines específicos en la placa Arduino, que en este caso son los puertos digitales 8, 9, 10 y 11.
+				</p>
+
+			</div>
+			
+			<div class="col-3 columna">
+				<h3 class="text-center">Materiales a usar</h3>
+				<div class="row justify-content-evenly">
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Arduino.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#arduino-m" target="_blank" style="text-decoration: none;">- Arduino uno</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/CableUSB.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#cable-usb-m" target="_blank" style="text-decoration: none;">- Cable usb</a></p>
+					</div>
+
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/MotorPaso.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#motor-p-p-m" target="_blank" style="text-decoration: none;">- Motor paso a paso</a></p>
+					</div>
+
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/ControladorMotorPaso.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#c-motor-p-p-m" target="_blank" style="text-decoration: none;">- Controlador de paso a paso</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Leds.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#leds-m" target="_blank" style="text-decoration: none;">- 1 Led (cualquier color)</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Resistor.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8 ">
+						<p><a href="../materiales/index.html#resistencia-m" target="_blank" style="text-decoration: none;">- Resistencia (330ohms)</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 columna">
+				<h3 class="text-center"><strong> Diagrama</strong></h3>
+				<img src="../assets/img/" alt="" class="Diagrama-1">
+
+			</div>
+			<div class="col-12 columna columna1">
+				<h3 class="text-center">Codigo realizado</h3>
+
+
+
+				  <!-- Contenedor del código -->
+  <div id="codigo-container">
+    <!-- Botón de copiar -->
+    <button id="copiar-btn" class="btn btn-primary">Copiar Código</button>
+    <!-- Cuadro de texto con líneas numeradas -->
+
+    <textarea id="codigo" readonly>
+
+		#include <Stepper.h>
+		
+		Stepper motor1(2048, 8, 10, 9, 11);
+		
+		void setup() {
+		  motor1.setSpeed(15);
+		}
+		
+		void loop() {
+		  int x;
+		  x=random(2048,2048*2);
+		  motor1.step(x);
+		  delay(5000);
+		}
+    </textarea>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Script JavaScript/jQuery -->
+  <script>
+    $(document).ready(function() {
+      // Función para copiar el contenido del cuadro de texto al portapapeles
+      $('#copiar-btn').click(function() {
+        var codigo = $('#codigo').val();
+        navigator.clipboard.writeText(codigo).then(function() {
+          alert('Código copiado al portapapeles.');
+        }, function(err) {
+          console.error('No se pudo copiar el código: ', err);
+        });
+      });
+    });
+  </script>
+			
+
+	</div>
+
+</body>
+</html>

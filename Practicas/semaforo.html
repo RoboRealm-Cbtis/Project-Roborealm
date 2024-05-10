@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="../js/jquery-3.6.3.min.js"></script>
+	<script type="text/javascript" src="../js/funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script type="text/javascript" src="../js/scripts.js"></script>
+	<link rel="icon" type="image/x-icon" href="../assets/logo-2.ico"/>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet"/>
+        <link rel="icon" type="image/x-icon" href="assets/material.ico"/>
+	<title>RoboRealm - Semaforo</title>
+</head>
+<style type="text/css">
+	.columna{
+		background-color: #E9E9E9;
+		border-radius: 2vh;
+		margin: 1vh;
+	}
+	.columna-Materials{
+		background-color: #E9E9E9;
+		border-radius: 2vh;
+		margin: 1vh;
+		height: 500px;
+	}
+	
+	.code-list{
+		padding-top: 2vh;
+		background: #F5F0D1;
+	}
+	.ln-code{
+		display: flex;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: smaller;
+		border-bottom: 1px rgba(0, 0, 0, 0.247) solid;
+		
+	}
+	.num{
+		padding-right: 1vw;
+		color: blue;
+		font-size: small;
+
+	}
+	    /* Estilos para el contenedor del código */
+		#codigo-container {
+      width: 80%;
+      margin: 50px auto;
+      position: relative;
+    }
+    /* Estilos para el cuadro de texto */
+    #codigo {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+    /* Estilos para las líneas numeradas */
+    .line-numbers {
+      position: absolute;
+      left: -40px;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      padding: 10px 0;
+      background-color: #f8f9fa;
+      border-right: 1px solid #ccc;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Estilos para el botón de copiar */
+    #copiar-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+	.Diagrama-1{
+		width: 100%;
+		height: 400px;
+	}
+</style>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <a class="navbar-brand" href="../index.html">RoboRealm</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+	<div class="container" style="margin-top: 2vh;">
+
+		<H2 class="text-center" style="color: red;">Semaforo <img src="../assets/img/semaforo.png" width="48px" height="48px"> </H2>
+		<div class="row justify-content-between">
+			
+			<div class="col-12 columna">
+				<h3 class="text-center">Video explicativo</h3>
+					<div class="ratio ratio-21x9">
+					  <div>
+						  	
+					  </div>
+					</div>
+
+			</div>
+
+			<div class="col-lg-8 col-md-6 col-sm-12  columna">
+				<h2 class="text-center"><strong>Paso a paso</strong></h2>
+				<p><strong> Para trabajar con un simulador de semáforo controlado por un Arduino uno:</strong><br><br>
+
+1. Conecta la protoboard al puerto negativo (GND) del Arduino Uno para establecer la conexión a tierra.<br><br>
+2. Conecta los LEDs asegurándote de distinguir el ánodo (pata más larga) y el cátodo (pata más corta). Conecta los ánodos en puntos deseados dejando al menos 3 puntos de espacio y conecta los cátodos hacia la conexión a tierra.<br><br>
+3. Conecta los cables de los LEDs en serie con los ánodos y las resistencias en serie con los cátodos, dejando un espacio y conectándolas a la línea de tierra de la protoboard.<br><br>
+4. Conecta el cable del LED rojo al pin digital #9 del Arduino, el cable del LED amarillo al pin digital #8 y el cable del LED verde al pin digital #7.<br><br>
+5. Declara las variables de los pines digitales en el código antes de la sección "void setup" utilizando la función pinMode para configurar los pines como salidas.<br><br>
+6. Dentro de "void setup", declara la función pinMode para cada variable y así establece los pines como salidas.<br><br>
+7. En la sección "void loop", utiliza la función digitalWrite para encender y apagar los LEDs según el patrón del semáforo. Asigna la función HIGH para encender y LOW para apagar, junto con un retraso utilizando la función delay para establecer la duración de cada estado del semáforo.<br><br>
+8. Compila el código y cárgalo en el Arduino Uno conectándolo a un puerto USB de la computadora. Compila presionando el botón de la palomita y carga el código presionando el botón de subir.<br><br>
+9. Una vez cargado, observa el funcionamiento del semáforo.<br><br>	
+</p>
+
+			</div>
+			
+			<div class="col-lg-3 col-md-5 col-sm-12 columna-Materials ">
+				<h3 class="text-center">Materiales a usar</h3>
+				<div class="row justify-content-evenly">
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Arduino.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#arduino-m" target="_blank" style="text-decoration: none;">- Arduino uno</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/CableUSB.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#cable-usb-m"target="_blank" style="text-decoration: none;">- Cable usb</a></p>
+					</div>
+
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Protoboard.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#protoboard-m" target="_blank" style="text-decoration: none;">- Protoboard</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Leds.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8  ">
+						<p><a href="../materiales/index.html#leds-m" target="_blank" style="text-decoration: none;">- 1 Led (Rojo, verde, amarillo)</a></p>
+					</div>
+					<div class="col-3" style="margin: 1vh; ">
+						<img src="../Materiales/img/Resistor.jpg" class="img-fluid rounded" style="width: 60px; height: 60px;">
+					</div>
+					<div class="col-8 ">
+						<p><a href="../materiales/index.html#resistencia-m" target="_blank" style="text-decoration: none;">- 3 Resistencias (220ohms)</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-12 columna">
+				<h3 class="text-center"><strong> Diagrama</strong></h3>
+				<img src="../assets/img/Semaforo-circuito.png" alt="" class="Diagrama-1">
+
+			</div>
+			<div class="col-12 columna columna1">
+				<h3 class="text-center">Codigo realizado</h3>
+
+				  <!-- Contenedor del código -->
+  <div id="codigo-container">
+    <!-- Botón de copiar -->
+    <button id="copiar-btn" class="btn btn-primary">Copiar</button>
+    <!-- Cuadro de texto con líneas numeradas -->
+
+    <textarea id="codigo" readonly>
+		int rojo=8;
+		int amarillo=9;
+		int verde=10;
+
+		void setup(){
+		    pinMode(rojo, OUTPUT);               // led rojo - pin de salida
+		    pinMode(verde, OUTPUT);              // led verde - pin de salida 
+		    pinMode(amarillo, OUTPUT);           // led amarillo - pin de salida 
+		} 
+		  
+		void loop() { // bucle infinito 
+
+		    digitalWrite(verde, HIGH);          // se enciende el led verde
+		    delay(3000);                        // pausa 3 segundos
+		    digitalWrite(verde, LOW);           // se apaga el led verde 
+		    digitalWrite(amarillo, HIGH);       // se enciende el led amarillo
+		    delay(1000);                        // pausa 1 segundo
+		    digitalWrite(amarillo, LOW);        // se apaga el led amarillo 
+		    digitalWrite(rojo, HIGH);           // se enciende el led rojo
+		    delay(3000);                        // pausa 3 segundos
+		    digitalWrite(rojo, LOW);            // se apaga el led rojo 
+		  
+		}
+    </textarea>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Script JavaScript/jQuery -->
+  <script>
+    $(document).ready(function() {
+      // Función para copiar el contenido del cuadro de texto al portapapeles
+      $('#copiar-btn').click(function() {
+        var codigo = $('#codigo').val();
+        navigator.clipboard.writeText(codigo).then(function() {
+          alert('Código copiado al portapapeles.');
+        }, function(err) {
+          console.error('No se pudo copiar el código: ', err);
+        });
+      });
+    });
+  </script>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
