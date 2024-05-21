@@ -110,13 +110,29 @@
 			</div>
 
 			<div class="col-8 columna">
-				<h2 class="text-center">Texto explicativo</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h2 class="text-center">Explicacion paso a paso</h2>
+				<p>Para conectar la pantalla LCD a tu Arduino paso a paso, aquí tienes una guía detallada:<br><br>
+				Conexión de la alimentación<br>
+				1. Conecta la línea de alimentación de 5V del Arduino al lado positivo (+) de la protoboard.<br>
+				2. Conecta el GND (tierra) del Arduino al lado negativo (-) de la protoboard.<br>
+				3. Conecta los lados positivo y negativo de la protoboard: conecta los lados negativos (-) entre sí y los lados positivos (+) entre sí.<br><br>
+				
+				Cableado de la pantalla LCD:<br>
+				1. Conecta el GND de la pantalla LCD a la fila 4 de la protoboard y conecta la otra extremidad en la columna c.<br>
+				2. Coloca una resistencia de 220 ohmios en la fila 4, columna d, y termina la conexión en la misma fila, pero en la columna f.<br>
+				3. Conecta el VCC (alimentación) de la pantalla al lado positivo de la protoboard.<br>
+				4. Conecta el VD (contraste) de la pantalla al lado negativo de la protoboard.<br>
+				5. Conecta el RS (selector de registro) a la fila 7, columna f, de la protoboard. Luego, pasa un cable desde la fila 7, columna j, de la protoboard al pin 12 del Arduino.<br>
+				6. Conecta el RW (lectura/escritura) de la pantalla al lado negativo de la protoboard.<br>
+				7. Conecta el pin E (habilitar) de la pantalla a la fila 9, columna f, de la protoboard. Luego, pasa un cable desde la fila 9, columna j, de la protoboard al pin 11 del Arduino.<br>
+				8. Conecta el D4 de la pantalla a la fila 14, columna f, de la protoboard. Luego, pasa un cable desde la fila 14, columna g, de la protoboard al pin 5 del Arduino.<br>
+				9. Conecta el D5 de la pantalla a la fila 15, columna f, de la protoboard. Luego, pasa un cable desde la fila 15, columna g, de la protoboard al pin 4 del Arduino.<br>
+				10. Conecta el D6 de la pantalla a la fila 16, columna f, de la protoboard. Luego, pasa un cable desde la fila 16, columna g, de la protoboard al pin 3 del Arduino.<br>
+				11. Conecta el D7 de la pantalla a la fila 17, columna f, de la protoboard. Luego, pasa un cable desde la fila 17, columna g, de la protoboard al pin 2 del Arduino.<br>
+				12. Conecta el LED de la pantalla a la fila 19, columna h, de la protoboard. Coloca una resistencia de 330 ohmios en la fila 19, columna i, y termina la conexión en el lado positivo de la placa.<br>
+				13. Conecta el LED de la pantalla al lado negativo de la protoboard.<br><br>
+				
+				¡Con estos pasos, deberías tener tu pantalla LCD conectada y lista para usar con tu Arduino!</p>
 
 			</div>
 			
