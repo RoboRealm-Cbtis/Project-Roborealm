@@ -18,7 +18,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">RoboRealm <a href="https://www.facebook.com/profile.php?id=100063066558435&mibextid=ZbWKwL"class="cbtis"><strong>CBTIS-144</strong></a></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -236,5 +236,21 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script>
+document.addEventListener("scroll", function () {
+    const navbar = document.getElementById("mainNav");
+
+    if (window.scrollY > 50) {
+        // Al hacer scroll → fondo blanco, texto oscuro
+        navbar.classList.remove("navbar-dark");
+        navbar.classList.add("navbar-light", "bg-white", "shadow");
+    } else {
+        // En la parte superior → transparente, texto blanco
+        navbar.classList.add("navbar-dark");
+        navbar.classList.remove("navbar-light", "bg-white", "shadow");
+    }
+});
+</script>
     </body>
 </html>
